@@ -1,0 +1,159 @@
+<div class="container-fluid bg">
+    <div class="text-center text-white pt-2">
+        <h2><b><i><span class="text-danger">Air</span>Bus</i></b></h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-light rounded py-12">
+            <div class="p-4 md-3">
+                <div *ngIf="user">
+                    <h3><b>Welcome to AirBus! <span class="text-danger"><i>{{user.userName}}</i></span></b></h3>
+                    <small><b>User Id: {{ user.userId }}</b></small><br />
+                    <button class="btn btn-danger float-left" routerLink="/userHome">Home</button>
+                    <button class="btn btn-danger float-right" (click)="logout()">Logout</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="panel bg1 rounded p-5 m-5">
+        <div align="center" class="m-3">
+            <h4><b>Booking Details</b></h4>
+        </div>
+
+        <div *ngIf="notFound" align="center">
+            <h5 class="bg-warning text-danger">No booking found...</h5>
+        </div>
+
+        <div *ngIf="found">
+            <table class="table table-striped rounded">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Booking Id</th>
+                        <th>Bus Number</th>
+                        <th>Amount</th>
+                        <th>Booking Date</th>
+                        <th>Booking Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let booking of bookings" class="table-striped rounded">
+                    <tr>
+                        <td scope="row">{{booking.bookingId}}</td>
+                        <td>{{booking.busNumber}}</td>
+                        <td>{{booking.totalCost | currency:'INR'}}</td>
+                        <td>{{booking.bookingDate }}</td>
+                        <td>{{booking.bookingTime}}</td>
+                        <td>
+                            <button class="btn btn-danger" (click)="getPassengers(booking)">Passenger Details</button>
+                            &nbsp;
+                            <button class="btn btn-danger" (click)="getBusDetails(booking.busNumber)">Bus
+                                Details</button>
+                            &nbsp;
+                            <button class="btn btn-danger" (click)="delete(booking.bookingId)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div><br><br>
+
+        <div class="panel-body" *ngIf="bus">
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>Bus Number:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6>{{ bus.busNumber }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>From:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6>{{ bus.departureBusstop }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>To:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6>{{ bus.arrivalBusstop }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>Departure date:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6>{{ bus.departureDate }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>Departure Time:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6>{{ bus.departureTime }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>Arrival Date:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6>{{ bus.arrivalDate }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>Arrival Time:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6><b>{{ bus.arrivalTime }}</b></h6>
+                </div>
+            </div>
+
+            <br><br>
+
+        </div>
+
+        <div *ngIf="passengers">
+
+            <h6>Passenger Details</h6>
+
+            <table class="table table-striped rounded">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Passenger ID</th>
+                        <th>Passenger Name</th>
+                        <th>Passenger Age</th>
+                        <th>Passenger Luggage</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let passenger of passengers" class="table-striped">
+                    <tr>
+                        <td scope="row">{{passenger.passengerId}}</td>
+                        <td>{{passenger.name}}</td>
+                        <td>{{passenger.age}}</td>
+                        <td>{{passenger.luggage}}</td>
+                        <td><button class="btn btn-danger"
+                                (click)="updatePassenger(passenger.passengerId)">Update</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>

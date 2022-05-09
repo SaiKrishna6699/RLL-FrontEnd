@@ -1,0 +1,68 @@
+<div class="container-fluid bg">
+    <div class="text-center text-white pt-2">
+        <h2><b><i><span class="text-danger">Air</span>Bus</i></b></h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-light rounded py-12">
+            <div class="p-4 md-3">
+                <div *ngIf="user">
+                    <h3><b>Welcome to AirBus! <span class="text-danger"><i>{{user.userName}}</i></span></b></h3>
+                    <small><b>User Id: {{ user.userId }}</b></small><br />
+                    <button class="btn btn-danger float-left" routerLink="/userHome">Home</button>
+                    <button class="btn btn-danger float-right" (click)="logout()">Logout</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    ><br><br>
+
+    <div class="jumbotron p-5 m-5 justify-content-center bg1" *ngIf="user">
+        <h3 class="text-center">
+            User Details
+        </h3>
+        <br><br>
+        <div class="row justify-content-center">
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-6">
+                        <h6>User ID:</h6>
+                    </div>
+                    <div class="col-6">
+                        <h6>{{user.userId}}</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h6>User name:</h6>
+                    </div>
+                    <div class="col-6">
+                        <h6>{{user.userName}}</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h6>Phone:</h6>
+                    </div>
+                    <div class="col-6">
+                        <h6>{{user.phone}}</h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h6>email:</h6>
+                    </div>
+                    <div class="col-6">
+                        <h6>{{user.email}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

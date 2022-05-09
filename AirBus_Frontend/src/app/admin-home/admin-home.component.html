@@ -1,0 +1,44 @@
+<div class="container-fluid bg">
+    <div class="text-center text-white pt-2">
+        <h2><b><i><span class="text-danger">Air</span>Bus</i></b></h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-12  text-light rounded shadow py-12">
+            <div class="p-4 md-3">
+                <h3><b>Welcome, <span class="text-danger"><i>{{adminDetails.adminName}}</i></span></b></h3>
+                <button class="btn btn-danger float-right pd-5" (click)="logout()">Logout</button>
+                <div class="px-1 md-5" *ngIf="adminDetails">
+                    <small><b>Admin id: {{adminDetails.adminId}}</b></small><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="jumbotron bg1">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card cardbg">
+                    <div class="card-body">
+                        <h3 class="card-title">Add Bus Details</h3>
+                        <p class="card-text">Here Admin can add the Bus Details into the Database.</p>
+                        <button type="submit" class="btn btn-danger float-right" routerLink="/addBusDetails">Add Bus
+                            Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card cardbg">
+                    <div class="card-body">
+                        <h3 class="card-title">View All Bus Details</h3>
+                        <p class="card-text">Here Admin can view all Bus Details from the Database.</p>
+                        <button type="submit" routerLink="/allBussDetails" class="btn btn-danger float-right">View Bus
+                            Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
