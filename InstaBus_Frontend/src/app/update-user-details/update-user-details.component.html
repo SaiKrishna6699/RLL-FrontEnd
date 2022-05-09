@@ -1,12 +1,12 @@
 <div class="container-fluid bg">
     <div class="text-center text-white pt-2">
-        <h2><b><i><span class="text-danger">Insta</span>Bus</i></b></h2>
+        <h2><b><i><span class="text-danger">Air</span>Bus</i></b></h2>
     </div>
     <div class="row">
         <div class="col-sm-12 text-light rounded py-12">
             <div class="p-4 md-3">
                 <div *ngIf="user">
-                    <h3><b>Welcome to InstaBus! <span class="text-danger"><i>{{user.userName}}</i></span></b></h3>
+                    <h3><b>Welcome to AirBus! <span class="text-danger"><i>{{user.userName}}</i></span></b></h3>
                     <small><b>User Id: {{ user.userId }}</b></small><br />
                     <button class="btn btn-danger float-left" routerLink="/userHome">Home</button>
                     <button class="btn btn-danger float-right" (click)="logout()">Logout</button>
