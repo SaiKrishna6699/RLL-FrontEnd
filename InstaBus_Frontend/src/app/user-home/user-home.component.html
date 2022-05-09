@@ -102,73 +102,73 @@
   <div class="jumbotron jb1 bg1" *ngIf="found">
     <div class="row r1">
       <div class="col-6">
-        <h5><b>Bus Number:</b></h5>
+        <h6><b>Bus Number:</b></h6>
       </div>
       <div class="col-6">
-        <h5>{{ bus.busNumber }}</h5>
-      </div>
-    </div>
-
-    <div class="row r1">
-      <div class="col-6">
-        <h5><b>From:</b></h5>
-      </div>
-      <div class="col-6">
-        <h5>{{ bus.departureBusstop }}</h5>
+        <h6>{{ bus.busNumber }}</h6>
       </div>
     </div>
 
     <div class="row r1">
       <div class="col-6">
-        <h5><b>To:</b></h5>
+        <h6><b>From:</b></h6>
       </div>
       <div class="col-6">
-        <h5>{{ bus.arrivalBusstop }}</h5>
-      </div>
-    </div>
-
-    <div class="row r1">
-      <div class="col-6">
-        <h5><b>Departure date:</b></h5>
-      </div>
-      <div class="col-6">
-        <h5>{{ bus.departureDate }}</h5>
+        <h6>{{ bus.departureBusstop }}</h6>
       </div>
     </div>
 
     <div class="row r1">
       <div class="col-6">
-        <h5><b>Departure Time:</b></h5>
+        <h6><b>To:</b></h6>
       </div>
       <div class="col-6">
-        <h5>{{ bus.departureTime }}</h5>
-      </div>
-    </div>
-
-    <div class="row r1">
-      <div class="col-6">
-        <h5><b>Arrival Date:</b></h5>
-      </div>
-      <div class="col-6">
-        <h5>{{ bus.arrivalDate }}</h5>
+        <h6>{{ bus.arrivalBusstop }}</h6>
       </div>
     </div>
 
     <div class="row r1">
       <div class="col-6">
-        <h5><b>Arrival Time:</b></h5>
+        <h6><b>Departure date:</b></h6>
       </div>
       <div class="col-6">
-        <h5>{{ bus.arrivalTime }}</h5>
+        <h6>{{ bus.departureDate }}</h6>
       </div>
     </div>
 
     <div class="row r1">
       <div class="col-6">
-        <h5><b>Cost:</b></h5>
+        <h6><b>Departure Time:</b></h6>
       </div>
       <div class="col-6">
-        <h5>{{ bus.cost | currency:'INR' }}</h5>
+        <h6>{{ bus.departureTime }}</h6>
+      </div>
+    </div>
+
+    <div class="row r1">
+      <div class="col-6">
+        <h6><b>Arrival Date:</b></h6>
+      </div>
+      <div class="col-6">
+        <h6>{{ bus.arrivalDate }}</h6>
+      </div>
+    </div>
+
+    <div class="row r1">
+      <div class="col-6">
+        <h6><b>Arrival Time:</b></h6>
+      </div>
+      <div class="col-6">
+        <h6>{{ bus.arrivalTime }}</h6>
+      </div>
+    </div>
+
+    <div class="row r1">
+      <div class="col-6">
+        <h6><b>Cost:</b></h6>
+      </div>
+      <div class="col-6">
+        <h6>{{ bus.cost | currency:'INR' }}</h6>
       </div>
     </div><br><br>
     <div align="center"><button class="btn btn-danger" (click)="addPassengers()">Add Passengers</button>

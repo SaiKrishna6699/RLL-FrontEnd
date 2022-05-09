@@ -22,7 +22,7 @@
         </div>
 
         <div *ngIf="notFound" align="center">
-            <h3 class="bg-warning text-danger">No booking found...</h3>
+            <h5 class="bg-warning text-danger">No booking found...</h5>
         </div>
 
         <div *ngIf="found">
@@ -61,64 +61,64 @@
         <div class="panel-body" *ngIf="bus">
             <div class="row">
                 <div class="col-6">
-                    <h4><b>Bus Number:</b></h4>
+                    <h6><b>Bus Number:</b></h6>
                 </div>
                 <div class="col-6">
-                    <h4>{{ bus.busNumber }}</h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-6">
-                    <h4><b>From:</b></h4>
-                </div>
-                <div class="col-6">
-                    <h4>{{ bus.departureBusstop }}</h4>
+                    <h6>{{ bus.busNumber }}</h6>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-6">
-                    <h4><b>To:</b></h4>
+                    <h6><b>From:</b></h6>
                 </div>
                 <div class="col-6">
-                    <h4>{{ bus.arrivalBusstop }}</h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-6">
-                    <h4><b>Departure date:</b></h4>
-                </div>
-                <div class="col-6">
-                    <h4>{{ bus.departureDate }}</h4>
+                    <h6>{{ bus.departureBusstop }}</h6>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-6">
-                    <h4><b>Departure Time:</b></h4>
+                    <h6><b>To:</b></h6>
                 </div>
                 <div class="col-6">
-                    <h4>{{ bus.departureTime }}</h4>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-6">
-                    <h4><b>Arrival Date:</b></h4>
-                </div>
-                <div class="col-6">
-                    <h4>{{ bus.arrivalDate }}</h4>
+                    <h6>{{ bus.arrivalBusstop }}</h6>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-6">
-                    <h4><b>Arrival Time:</b></h4>
+                    <h6><b>Departure date:</b></h6>
                 </div>
                 <div class="col-6">
-                    <h4><b>{{ bus.arrivalTime }}</b></h4>
+                    <h6>{{ bus.departureDate }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>Departure Time:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6>{{ bus.departureTime }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>Arrival Date:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6>{{ bus.arrivalDate }}</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <h6><b>Arrival Time:</b></h6>
+                </div>
+                <div class="col-6">
+                    <h6><b>{{ bus.arrivalTime }}</b></h6>
                 </div>
             </div>
 
@@ -128,7 +128,7 @@
 
         <div *ngIf="passengers">
 
-            <h4>Passenger Details</h4>
+            <h6>Passenger Details</h6>
 
             <table class="table table-striped rounded">
                 <thead class="thead-dark">

@@ -21,6 +21,7 @@ import { UpdateBusComponent } from './update-bus/update-bus.component';
 import { AddPassengersComponent } from './add-passengers/add-passengers.component';
 import { UpdatePassengerComponent } from './update-passenger/update-passenger.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ViewUserDetailsComponent,
     UpdateUserDetailsComponent,
     AddBusDetailsComponent, 
-    ViewAllBusDetailsComponent, UpdateBusComponent, AddPassengersComponent, UpdatePassengerComponent, PageNotFoundComponent
+    ViewAllBusDetailsComponent, UpdateBusComponent, AddPassengersComponent, UpdatePassengerComponent, PageNotFoundComponent, HomeComponent
   ],
   imports: [
     FormsModule,

@@ -5,6 +5,7 @@ import { AddPassengersComponent } from "./add-passengers/add-passengers.componen
 import { AdminHomeComponent } from "./admin-home/admin-home.component";
 import { AdminLoginComponent } from "./admin-login/admin-login.component";
 import { ErrorComponent } from "./error/error.component";
+import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ShowUserBookingsComponent } from "./show-user-bookings/show-user-bookings.component";
 import { UpdateBusComponent } from "./update-bus/update-bus.component";
@@ -17,7 +18,8 @@ import { ViewAllBusDetailsComponent } from "./view-all-bus-details/view-all-bus-
 import { ViewUserDetailsComponent } from "./view-user-details/view-user-details.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/userLogin", pathMatch: "full" },
+  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "home", component: HomeComponent},
   { path: "userLogin", component: UserLoginComponent },
   { path: "addUser", component: UserRegisterComponent },
   { path: "error/:message", component: ErrorComponent },
