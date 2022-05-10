@@ -46,19 +46,17 @@ export class UpdateBusComponent implements OnInit {
     this.adminId = localStorage.getItem("adminId");
     if (this.adminId == null) {
       this.router.navigate(["/error", "admin not logged in login to continue"]);
+    } else {
+      this.adminId = parseInt(this.adminId);
+      this.adminService.getAdminDetails(this.adminId).subscribe(
+        (data) => {
+          this.adminDetails = data;
+        }
+      ),
+      this.route.paramMap.subscribe((param: ParamMap) => {
+        this.busNumber = parseInt(param.get('busNumber'));
+      });
     }
-    this.adminId = parseInt(this.adminId);
-    this.adminService.getAdminDetails(this.adminId).subscribe(
-      (data) => {
-        this.adminDetails = data;
-      },
-      (error) => {
-        this.router.navigate([
-          "/error",
-          "admin not logged in login to continue",
-        ]);
-      }
-    );
   }
 
   logout() {
