@@ -50,12 +50,6 @@ export class AddBusDetailsComponent implements OnInit {
       (data) => {
         this.adminDetails = data;
       },
-      (error) => {
-        this.router.navigate([
-          "/error",
-          "admin not logged in login to continue",
-        ]);
-      }
     );
   }
 

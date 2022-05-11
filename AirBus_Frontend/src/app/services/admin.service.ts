@@ -54,10 +54,6 @@ export class AdminService {
     return this.http.get(`${this.baseUrl}/getAllBusDetails`).pipe(catchError(this.errorHandler));
   }
 
-  viewPassengers(): Observable<any>{
-    return this.http.get('${this.baseUrl}/getAllPassengers').pipe(catchError(this.errorHandler));
-  }
-
   errorHandler(error) {
     let errorMessage = "";
     if (error.error instanceof ErrorEvent) {

@@ -28,7 +28,7 @@ export class ViewAllBusDetailsComponent implements OnInit {
         }
       );
     }
-  }
+  } 
 
   removeBus(busNo) {
     if (confirm("are you sure you want to delete?")) {
