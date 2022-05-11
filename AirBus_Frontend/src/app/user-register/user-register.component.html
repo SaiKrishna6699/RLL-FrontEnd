@@ -32,7 +32,7 @@
                     <div *ngIf="userRegisterForm.get('userName').invalid && userRegisterForm.get('userName').touched">
                         <small class="text-danger">*Field mandatory</small>
                     </div>
-                    <label for="userName"> name: </label>
+                    <label for="userName"> Name: </label>
                     <input
                         [class.is-invalid]="userRegisterForm.get('userName').invalid && userRegisterForm.get('userName').touched"
                         type="text" class="form-control" formControlName="userName" />
@@ -43,7 +43,7 @@
                     <div *ngIf="userRegisterForm.get('email').invalid && userRegisterForm.get('email').touched">
                         <small class="text-danger">*Field mandatory</small>
                     </div>
-                    <label for="email"> email: </label>
+                    <label for="email"> Email: </label>
                     <input
                         [class.is-invalid]="userRegisterForm.get('email').invalid && userRegisterForm.get('email').touched"
                         type="text" class="form-control" formControlName="email" />
@@ -69,10 +69,10 @@
                         <div class="input-group-text">
                             <span>+91</span>
                         </div>
+                        <input
+                            [class.is-invalid]="userRegisterForm.get('phone').invalid && userRegisterForm.get('phone').touched"
+                            type="number" class="form-control" formControlName="phone" />
                     </div>
-                    <input
-                        [class.is-invalid]="userRegisterForm.get('phone').invalid && userRegisterForm.get('phone').touched"
-                        type="number" class="form-control" formControlName="phone" />
                 </div>
 
 
@@ -87,7 +87,7 @@
                             <small class="text-danger">*password must be minimum 8 characters</small>
                         </div>
                     </div>
-                    <label for="password">password:</label>
+                    <label for="password">Password:</label>
                     <input
                         [class.is-invalid]="userRegisterForm.get('password').invalid && userRegisterForm.get('password').touched"
                         type="password" class="form-control" formControlName="password" />

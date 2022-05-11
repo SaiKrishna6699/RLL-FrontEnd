@@ -10,9 +10,6 @@ import { catchError } from "rxjs/operators";
 export class AdminService {
   constructor(private http: HttpClient) {}
 
-  /*
-   *  **********change base url according to your server**************
-   */
 
   private baseUrl = "http://localhost:8086/admin";
 
