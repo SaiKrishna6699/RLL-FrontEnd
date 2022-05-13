@@ -38,6 +38,7 @@ import { HomeComponent } from './home/home.component';
     AddBusDetailsComponent, 
     ViewAllBusDetailsComponent, UpdateBusComponent, AddPassengersComponent, UpdatePassengerComponent, PageNotFoundComponent, HomeComponent
   ],
+  
   imports: [
     FormsModule,
     ReactiveFormsModule,

@@ -49,7 +49,6 @@ export class UserRegisterComponent implements OnInit {
     }
   }
 
-
   /* ---------function to register-------- */
 
   submit() {

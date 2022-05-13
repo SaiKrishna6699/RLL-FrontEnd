@@ -24,10 +24,8 @@
         </div>
 
         <div class="col-sm-3 bg-light box pt5 box">
-            <div class="alert-warning" *ngIf="failure.value">Invalid Id or Password</div>
-
             <form class="form pt-5 mt-5" [formGroup]="loginForm" (ngSubmit)="submit()"><br>
-
+                <div class="alert-warning" *ngIf="failure.value">Invalid Id or Password</div>
                 <h3 class="text-bolder"><b>Admin Login</b></h3><br><br>
                 <!----------- admin id-------- -->
 
